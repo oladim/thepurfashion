@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {Filters} from "./allimports";
+// import {Filters} from "./allimports";
+import Filters from "./Filters";
 import { Link } from "react-router-dom";
 
 function Categories({stats}) {

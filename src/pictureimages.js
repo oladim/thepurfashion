@@ -5,7 +5,7 @@ const PictureImages = ({images}) => {
   const [image, setImage] = useState(images[0])
   return <Wrapper>
     
-    <div className='product'> <img src={image.url} alt=""/></div>
+    <div className='product'> <img src={image.url} alt="product_image"/></div>
     <div className="gallery">
       {images.map((image, index)=>{
         return <img src={image.url} key={index} alt="" 
@@ -22,8 +22,6 @@ const Wrapper = styled.section`
 display: grid;
 grid-template-rows: 1fr 1fr;
 
-
-
 .product{
   width: 420px;
   height: 300px;
@@ -33,7 +31,7 @@ grid-template-rows: 1fr 1fr;
     width: 420px;
     height: 100%;
     border-radius: 4px;
-    object-fit: cover;
+    object-fit: contain;
     
   }
 }
@@ -43,11 +41,22 @@ grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1rem;
   margin-top: 1rem
+  height: 80px;
+  width: 80px;
+
+  img{
+    height: 60px;
+    width: 60px;
+    border: 1px solid #F3A204;
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
   img{
-    height: 85px;
+   
     cursor: pointer;
     object-fit: cover;
+   
   }
   @media (max-width: 576px) {
     .main-image {

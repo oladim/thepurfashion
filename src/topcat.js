@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Category } from "./allimports";
+// import { Category } from "./allimports";
+import Category from "./components/category_template";
 
 
 function TopCategories() {

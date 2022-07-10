@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import ladyBag from "../assets/images/ladybag.png";
 import maleBag from "../assets/images/malebag.png";
-import { BlackButton } from "../allimports";
+// import { BlackButton } from "../allimports";
+import { BlackButton } from "../utils/helpers";
 
 
 function SmallFlash() {
