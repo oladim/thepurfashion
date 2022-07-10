@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { DealsHeading } from "./allimports";
+// import { DealsHeading } from "./allimports";
+import DealsHeading from "./components/dealsheading"; 
 
 function TopDeals() {
     return <Wrapper>

@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 import {useUserContext} from "./context/user_context";
+import { Link } from "react-router-dom";
+import { useCartContext } from "./context/cart_context";
 
 const logo = require("./assets/images/logo.png");
 
 function Header() {
-
+const {total_items} = useCartContext();
     const { loginWithRedirect, myUser, logout } = useUserContext()
 
     return <Wrapper>
@@ -30,11 +32,12 @@ function Header() {
          
       )}
 
-            
+            <Link to="/cart">
             <div className="cart">
                 <p>MY CART</p>
-                <div className="item">0</div>
+                <div className="item">{total_items}</div>
             </div>
+            </Link>
         </div>
         </div>
         

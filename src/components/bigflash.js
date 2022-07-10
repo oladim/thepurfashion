@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import image from "../assets/images/coachbag.png";
-import { BlackButton, Price } from "../allimports";
+// import { BlackButton, Price } from "../allimports";
+import { BlackButton } from "../utils/helpers";
+import Price from "./price";
 
 
 function BigFlash() {

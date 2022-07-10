@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import {SmallFlash, MediumFlash, BigFlash} from "./allimports";
+// import {SmallFlash, MediumFlash, BigFlash} from "./allimports";
+import SmallFlash from  "./components/smallflash";
+import MediumFlash from "./components/mediumflash";
+import BigFlash from "./components/bigflash";
 const rectangle = require("./assets/images/rectangle.png");
 const flashimage = require("./assets/images/flashimage.png");
 const small = require("./assets/images/small.png");
