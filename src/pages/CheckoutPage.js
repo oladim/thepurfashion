@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PageHero, StripeCheckout } from '../components'
+import StripeCheckout  from '../components/StripeCheckout'
 
 // extra imports
 import { useCartContext } from '../context/cart_context'
@@ -10,7 +10,7 @@ const CheckoutPage = () => {
   const { cart } = useCartContext()
   return (
     <main>
-      <PageHero title='checkout' />
+      {/* <PageHero title='checkout' /> */}
       <Wrapper className='page'>
         {cart.length < 1 ? (
           <div className='empty'>

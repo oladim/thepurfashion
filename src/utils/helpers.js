@@ -18,9 +18,9 @@ export const getUniqueValues = (data, type) => {
 
 export const BlackButton = () => {
 
-  const id = 1;
+
   return<Wrapper>
-    <Link to={`/checkout/${id}`} className="link"><div className="order">Order Now</div></Link>
+    <Link to={"#"} className="link"><div className="order">View More</div></Link>
   </Wrapper>
 }
 

@@ -18,17 +18,17 @@ const PictureImages = ({images}) => {
 
 export default PictureImages;
 
-const Wrapper = styled.section`
-display: grid;
-grid-template-rows: 1fr 1fr;
+const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
 
 .product{
-  width: 420px;
-  height: 300px;
+  width: 400px;
+  height: 100%;
   
 
   img{
-    width: 420px;
+    width: 80%;
     height: 100%;
     border-radius: 4px;
     object-fit: contain;
@@ -59,8 +59,8 @@ grid-template-rows: 1fr 1fr;
    
   }
   @media (max-width: 576px) {
-    .main-image {
-      height: 300px;
+    .product {
+      width: 100%;
     }
     .gallery {
       img {

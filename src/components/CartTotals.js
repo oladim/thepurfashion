@@ -26,12 +26,12 @@ const CartTotals = () => {
           </h4>
         </article>
         {myUser ? (
-          <Link to='/checkout' className='btn'>
+          <Link to='/checkout' className='btn btn-special'>
             proceed to checkout
           </Link>
         ) : (
           <button type='button' className='btn' onClick={loginWithRedirect}>
-            login
+            login to continue
           </button>
         )}
       </div>
@@ -72,6 +72,12 @@ const Wrapper = styled.section`
   h4 {
     margin-top: 2rem;
   }
+ 
+  @media (min-width: 776px) {
+    justify-content: flex-end;
+  }
+  
+
   .btn {
     text-transform: uppercase;
     background: #BC3B62;
@@ -86,15 +92,25 @@ const Wrapper = styled.section`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: var(--radius);
     border-color: transparent;
-  }
-  @media (min-width: 776px) {
-    justify-content: flex-end;
-  }
-  .btn {
-    width: 100%;
+    text-decoration: none;
     margin-top: 1rem;
-    text-align: center;
-    font-weight: 700;
+    height: 4rem;
+    width: 100%;
+
+    p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+    }
+   
+  }
+  .btn-special{
+    width: 95%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 

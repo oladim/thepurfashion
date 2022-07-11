@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import { useProductsContext } from "./context/products_context";
 // import {SmallFlash, MediumFlash, BigFlash} from "./allimports";
 import SmallFlash from  "./components/smallflash";
 import MediumFlash from "./components/mediumflash";
@@ -10,7 +11,11 @@ const itemimage = require("./assets/images/itemimage.png");
 
 
 
+
 function FlashSales() {
+    // const {products} = useProductsContext();
+
+    // const {name, color, size, stock, weight, material, url} = products[0];
     return <Wrapper>
         <div className="flash">
             <div className="flashdetails">
@@ -18,23 +23,23 @@ function FlashSales() {
             <div className="flashimage">
             <div className="flashimagedetails">
                 <div><img src={small} alt="small_background"/></div>
-                <div><img className="topimage" src={itemimage} alt="itemimage"/></div>
+                <div className="f_image"><img className="topimage" src={itemimage} alt="itemimage"/></div>
             </div>
-            <div><img src={flashimage} alt="flashimage"/> <div className="order">Order Now</div></div>
+            <div><img src={flashimage} alt="flashimage"/> <div className="order"></div></div>
             </div>
             </div>
             </div>
             <div className="details">
                 <div>Product Details</div>
                 <ul>
-                    <li>Name: </li>
-                    <li>Color: </li>
-                    <li>Bag Size: </li>
-                    <li>Available Pieces: </li>
-                    <li>Material: </li>
-                    <li>Size: </li>
-                    <li>Inner Material: </li>
-                    <li>Weight: </li>
+                    <li>Name: "Leather Bag"</li>
+                    <li>Color: "All"</li>
+                    {/* <li>Bag Size: </li> */}
+                    <li>Available Pieces: 10</li>
+                    <li>Material: PU Leather</li>
+                    <li>Size: 4</li>
+                    <li>Inner Material: PU Leather</li>
+                    <li>Weight: 0.7kg</li>
                 </ul>
             </div>
         </div>
@@ -93,12 +98,26 @@ margin-left: auto;
             top: -20px;
             left: 42px;
             justify-content: center;
+            width: 25%;
+            height: 80%;
+            border-radius: 1rem;
             
 
             .flashimagedetails{
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+
+                .f_image{
+                    width: 100px;
+                    height: 100px;
+
+                    .topimage{
+                        width: 50px;
+                        height: 100%;
+                        obeject-fit: cover;
+                    }
+                }
             }
            }
            .order{

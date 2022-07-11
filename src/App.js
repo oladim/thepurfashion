@@ -2,7 +2,7 @@ import Main from "./main";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PrivateRoute from "./PrivateRoute";
 import AuthWrapper from "./AuthWrapper";
-import Checkout from "./checkout";
+// import Checkout from "./checkout";
 // import {SingleProductPage} from "./allimports";
 import Header from "./header";
 import Categories from "./categories";
@@ -11,6 +11,8 @@ import SinglePage from "./singlepage";
 import Products from "./products";
 // import SingleCar from "./singlecar";
 import CartPage from "./pages/CartPage";
+// import Checkout from "./checkout";
+import CheckoutPage from "./pages/CheckoutPage";
 
 
 function App() {
@@ -34,7 +36,11 @@ function App() {
          
           
           
-          <Route exact path="/checkout"><PrivateRoute><Checkout /></PrivateRoute></Route>
+          <Route exact path="/checkout">
+          <Header />
+            <Categories stats={"Checkout Page"} />
+            <PrivateRoute><CheckoutPage /></PrivateRoute>
+          </Route>
           <Route exact path="*"><Error /></Route>
       </Switch>
     </Router>

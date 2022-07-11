@@ -57,17 +57,7 @@ export default SinglePage;
 
 
 const Wrapper = styled.div`
-.product_content{
-  background: #FFFFFF;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 4rem;
-  padding:2rem;
-  width: 60%;
-  height: 60vh;
-  margin-left: auto;
-  margin-right: auto;
- display: grid;
- grid-template-columns: 1fr 1fr;
+.
 
   images{
     justify-self: center;
@@ -151,5 +141,17 @@ const Wrapper = styled.div`
         color: #494949;
       }
     }
+    
+}
+
+@media (max-width: 600px) {
+  .product_content {
+      height: 100%;
+    
+  }
+  hr{
+    width: 70%;
+    margin-left: 0;
+  }
 }
 `
