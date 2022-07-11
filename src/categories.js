@@ -7,15 +7,6 @@ function Categories({stats}) {
     return <Wrapper>
         <div className="content">
         {stats ? (<div className="back"><Link to="/"><button>Back to products</button></Link> <p>{stats}</p></div>) :   <Filters />}
-          
-            {/* <button>All Categories</button>
-            <button>New Products</button>
-            <button>Bags</button>
-            <button>Women</button>
-            <button>Men</button>
-            <button>Coach X Tom Weseelman</button>
-            <button>Coach Insider</button>
-            <button>Other Categories</button> */}
         </div>
     </Wrapper>
 }
@@ -52,6 +43,9 @@ background: #FFEBF1;
         background: #BC3B62;
         color: white;
         margin-right: 4rem;
+      }
+      p{
+        font-size: 1.5rem;
       }
     }
 }

@@ -3,30 +3,9 @@ import styled from "styled-components";
 import { useParams, useHistory } from 'react-router-dom';
 import { useProductsContext } from './context/products_context';
 import { single_product_url } from './utils/constants';
-// import { formatPrice } from './utils/helpers';
 import Loading from "./Loading";
 import  Error from "./Error";
-// import Categories from "./categories";
-// import PictureImages from "./pictureimages";
-// import AddToCart from './components/AddToCart';
 import DataPage from './datapage';
-// import axios from "axios";
-
-// const getSingleProduct = async (url) => {
-//   console.log(" from getsingle function url", url);
-//   // dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
-//   try {
-//     const response = await axios.get(url)
-//     const singleProduct = response.data
-//     console.log("singlepro", singleProduct);
-//     // dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct })
-//   } catch (error) {
-//     // dispatch({ type: GET_SINGLE_PRODUCT_ERROR })
-//   }
-// }
-
-
-
 
 const SinglePage = () => {
   // const [image, setImage] = useState("")
@@ -51,13 +30,10 @@ const SinglePage = () => {
 
     useEffect(() => {
       getSingleProduct(myurl);
-    console.log("single product", single_product);
       // eslint-disable-next-line
     }, [id])
     
-  // useEffect(()=>{
-
-  // },[single_product])
+ 
   if(loading){
     return <Loading />
   }
@@ -66,40 +42,11 @@ const SinglePage = () => {
     return <Error />  
   }
 
-// console.log(product.fields);
-// if(single_product.fields.name){
-  // const {name, price, images} = single_product;
-  // console.log(name);
-  // const mainImage = images[0].url;
-  // console.log(mainImage);
 
   return <Wrapper>
         
       <div className="product_content">
-<DataPage product={single_product}/>
-        
-        {/* <PictureImages className="images" images={images}/> */}
-        {/* <div>
-        <div className='product'> <img src={mainImage} alt="product_image"/></div> */}
-    {/* <div className="gallery">
-      {images.map((image, index)=>{
-        return <img src={image.url} key={index} alt="" 
-        onClick={()=>setImage(images[index])}/>
-      })}
-    </div> */}
-        {/* </div> */}
-        {/* <div>
-          <div className="name">{name}</div>
-          <div className="=code">Product Code: {id}</div>
-          <hr />
-          <div className="price">${price}</div>
-          <hr />
-         
-          <div className="buy_add"> */}
-         
-          {/* <AddToCart className="buy" product={single_product} /> */}
-          {/* </div> */}
-        {/* </div> */}
+        <DataPage product={single_product}/>      
       </div>
     </Wrapper>
 // }

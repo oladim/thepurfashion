@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-function Price() {
+function Price({price}) {
     return <Wrapper>
-    <p className="strike">$2000</p>
-    <p className="price">$200</p>
+    <p className="strike">${(0.70 * price)+price}</p>
+    <p className="price">${price}</p>
 </Wrapper>
 }
 

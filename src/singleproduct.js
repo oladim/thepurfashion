@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 
-function SingleProduct({url, id, name}) {
+function SingleProduct({url, id, name, price}) {
     return <Wrapper>
         <div className="contents">
             <div className="discount">-70%</div>
@@ -12,7 +12,7 @@ function SingleProduct({url, id, name}) {
             <Link to={`/products/${id}`} className='link'><FaSearch /></Link>
             <div className="name">{name}</div>
             <div className="price_cart">
-                <Price />
+                <Price price={price}/>
                 <div  className="cart"><img src={require("./assets/images/carticon.png")} alt="carticon"/></div>
             </div>
         </div>

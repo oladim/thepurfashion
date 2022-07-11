@@ -18,9 +18,9 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
         <img src={image} alt={name} />
         <div>
           <h5 className='name'>{name}</h5>
-          <p className='color'>
+          {/* <p className='color'>
             color : <span style={{ background: color }}></span>
-          </p>
+          </p> */}
           <h5 className='price-small'>{formatPrice(price)}</h5>
         </div>
       </div>
@@ -52,6 +52,7 @@ const Wrapper = styled.article`
   justify-items: center;
   margin-bottom: 3rem;
   align-items: center;
+ 
   .title {
     height: 100%;
     display: grid;
@@ -59,7 +60,7 @@ const Wrapper = styled.article`
     align-items: center;
     text-align: left;
     gap: 1rem;
-  }
+    }
   img {
     width: 100%;
     height: 100%;
@@ -69,7 +70,6 @@ const Wrapper = styled.article`
   }
   h5 {
     font-size: 0.75rem;
-    margin-bottom: 0;
   }
 
   .color {
@@ -122,7 +122,6 @@ const Wrapper = styled.article`
   @media (min-width: 776px) {
     .subtotal {
       display: block;
-      margin-bottom: 0;
       color: var(--clr-grey-5);
       font-weight: 400;
       font-size: 1rem;
@@ -138,6 +137,7 @@ const Wrapper = styled.article`
     }
     .name {
       font-size: 0.85rem;
+      
     }
     .color {
       font-size: 0.85rem;

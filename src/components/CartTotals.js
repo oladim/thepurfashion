@@ -40,6 +40,8 @@ const CartTotals = () => {
 }
 
 const Wrapper = styled.section`
+
+
   margin-top: 3rem;
   display: flex;
   justify-content: center;
@@ -47,6 +49,16 @@ const Wrapper = styled.section`
     border: 1px solid var(--clr-grey-8);
     border-radius: var(--radius);
     padding: 1.5rem 3rem;
+  }
+  h5, h4{
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+  h4{
+    font-size: 1.5rem;
   }
   h4,
   h5,
@@ -59,6 +71,21 @@ const Wrapper = styled.section`
   }
   h4 {
     margin-top: 2rem;
+  }
+  .btn {
+    text-transform: uppercase;
+    background: #BC3B62;
+    color: var(--clr-primary-10);
+    padding: 0.375rem 0.75rem;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 400;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    border-color: transparent;
   }
   @media (min-width: 776px) {
     justify-content: flex-end;

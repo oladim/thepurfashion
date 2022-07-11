@@ -10,6 +10,7 @@ import Error from "./Error";
 import SinglePage from "./singlepage";
 import Products from "./products";
 // import SingleCar from "./singlecar";
+import CartPage from "./pages/CartPage";
 
 
 function App() {
@@ -19,6 +20,11 @@ function App() {
       <Switch>
           <Route exact path='/'><Main /></Route>
           <Route exact path="/products"><Products /></Route>
+          <Route exact path="/cart">
+            <Header />
+            <Categories stats={"My Cart"} />
+            <CartPage />
+            </Route>
           <Route exact path='/products/:id'>
             
              <Header />

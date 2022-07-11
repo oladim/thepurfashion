@@ -6,10 +6,11 @@ import CartColumns from './CartColumns'
 import CartItem from './CartItem'
 import CartTotals from './CartTotals'
 
+
 const CartContent = () => {
   const { cart, clearCart } = useCartContext()
   return (
-    <Wrapper className='section section-center'>
+    <Wrapper>
       <CartColumns />
       {cart.map((item) => {
         return <CartItem key={item.id} {...item} />
@@ -17,7 +18,7 @@ const CartContent = () => {
       <hr />
       <div className='link-container'>
         <Link to='/products' className='link-btn'>
-          continue shopping
+          <p>continue shopping</p>
         </Link>
         <button
           type='button'
@@ -33,17 +34,25 @@ const CartContent = () => {
 }
 
 const Wrapper = styled.section`
+
+  padding: 5rem 0;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+
   .link-container {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
   }
   .link-btn {
+    height: 3rem;
+    text-decoration: none;
     background: transparent;
     border-color: transparent;
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
-    background: var(--clr-primary-5);
+    background: #BC3B62;
     color: var(--clr-white);
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
@@ -52,6 +61,7 @@ const Wrapper = styled.section`
   }
   .clear-btn {
     background: var(--clr-black);
+    height: 3.5rem;
   }
 `
 export default CartContent
