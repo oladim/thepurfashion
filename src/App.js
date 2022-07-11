@@ -7,27 +7,33 @@ import Checkout from "./checkout";
 import Header from "./header";
 import Categories from "./categories";
 import Error from "./Error";
-import SingleProductPage from "./singleproductpage";
+import SinglePage from "./singlepage";
+import Products from "./products";
+// import SingleCar from "./singlecar";
 
 
 function App() {
   return (
 <AuthWrapper>
     <Router>
-      {/* <Header /> */}
       <Switch>
           <Route exact path='/'><Main /></Route>
-          <Route path="/products/:id">
-          <Header />
+          <Route exact path="/products"><Products /></Route>
+          <Route exact path='/products/:id'>
+            
+             <Header />
           <Categories stats={"Product Page"} />
-          <SingleProductPage />
+            <SinglePage />
           </Route>
-          <Route path="/checkout"><PrivateRoute><Checkout /></PrivateRoute></Route>
-          <Route path="*"><Error /></Route>
-          </Switch>
+         
+          
+          
+          <Route exact path="/checkout"><PrivateRoute><Checkout /></PrivateRoute></Route>
+          <Route exact path="*"><Error /></Route>
+      </Switch>
     </Router>
     </AuthWrapper>
-  );
+  )
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 
-const Loading = () => {
+const  Products = () => {
   return <Wrapper>
     <div className='section section-center'>
       <div className='loading'></div>
@@ -9,7 +9,7 @@ const Loading = () => {
   </Wrapper>
 }
 
-export default Loading;
+export default Products;
 
 
 const Wrapper = styled.div`

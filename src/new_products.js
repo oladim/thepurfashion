@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import { DealsHeading, SingleProduct } from "./allimports";
 import DealsHeading from "./components/dealsheading";
-import SingleProduct from "./components/singleproduct";
+import SingleProduct from "./singleproduct";
 import { useFilterContext } from './context/filter_context';
 // import { useProductsContext } from "./context/products_context";
 

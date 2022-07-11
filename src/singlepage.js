@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { useParams, useHistory } from 'react-router-dom';
 import { useProductsContext } from './context/products_context';
@@ -9,9 +9,27 @@ import  Error from "./Error";
 // import Categories from "./categories";
 import PictureImages from "./pictureimages";
 import AddToCart from './components/AddToCart';
+import DataPage from './datapage';
+// import axios from "axios";
 
-function SingleProductPage() {
+// const getSingleProduct = async (url) => {
+//   console.log(" from getsingle function url", url);
+//   // dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
+//   try {
+//     const response = await axios.get(url)
+//     const singleProduct = response.data
+//     console.log("singlepro", singleProduct);
+//     // dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct })
+//   } catch (error) {
+//     // dispatch({ type: GET_SINGLE_PRODUCT_ERROR })
+//   }
+// }
 
+
+
+
+const SinglePage = () => {
+  const [image, setImage] = useState("")
     const { id } = useParams()
     let myurl = `${single_product_url}${id}`;
     const history = useHistory()
@@ -20,14 +38,7 @@ function SingleProductPage() {
       single_product_error: error,
       single_product,
       getSingleProduct
-      
     } = useProductsContext()
-  
-    useEffect(() => {
-      getSingleProduct(myurl);
-    
-      // eslint-disable-next-line
-    }, [id])
   
     useEffect(() => {
       if (error) {
@@ -37,53 +48,68 @@ function SingleProductPage() {
       }
       // eslint-disable-next-line
     }, [error])
-  
-    if(loading){
-      return<>
-    <Loading />
-      </> 
-     
-    }
-    if(error){
-      return<>
-    <Error />
-      </> 
-      
-      
-    }
+
+    useEffect(() => {
+      getSingleProduct(myurl);
+    console.log("single product", single_product);
+      // eslint-disable-next-line
+    }, [id])
+    
+  // useEffect(()=>{
+
+  // },[single_product])
+  if(loading){
+    return <Loading />
+  }
+
+  if(error){
+    return <Error />  
+  }
+
 // console.log(product.fields);
-    const {name, price, images} = single_product.fields;
+// if(single_product.fields.name){
+  // const {name, price, images} = single_product;
+  // console.log(name);
+  // const mainImage = images[0].url;
+  // console.log(mainImage);
 
-
-    return <Wrapper>
-        <div>
-         
-        </div>
-        <div className="product_content">
-        <PictureImages className="images" images={images}/>
-        <div>
-          <p className="name">{name}</p>
-          <p className="=code">Product Code: {id}</p>
+  return <Wrapper>
+        
+      <div className="product_content">
+<DataPage product={single_product}/>
+        
+        {/* <PictureImages className="images" images={images}/> */}
+        {/* <div>
+        <div className='product'> <img src={mainImage} alt="product_image"/></div> */}
+    {/* <div className="gallery">
+      {images.map((image, index)=>{
+        return <img src={image.url} key={index} alt="" 
+        onClick={()=>setImage(images[index])}/>
+      })}
+    </div> */}
+        {/* </div> */}
+        {/* <div>
+          <div className="name">{name}</div>
+          <div className="=code">Product Code: {id}</div>
           <hr />
-          <p className="price">${price}</p>
+          <div className="price">${price}</div>
           <hr />
          
-          <div className="buy_add">
+          <div className="buy_add"> */}
          
-          <AddToCart className="buy" product={single_product} />
-          </div>
- 
-        </div>
-        </div>
+          {/* <AddToCart className="buy" product={single_product} /> */}
+          {/* </div> */}
+        {/* </div> */}
+      </div>
     </Wrapper>
+// }
 }
 
 
-export default SingleProductPage;
+export default SinglePage;
+
 
 const Wrapper = styled.div`
-
-
 .product_content{
   background: #FFFFFF;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);

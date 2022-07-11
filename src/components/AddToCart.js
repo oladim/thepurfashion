@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { useCartContext } from '../context/cart_context';
 import AmountButtons from './AmountButtons';
 
-const AddToCart = ({ product }) => {
+const AddToCart = ({ products }) => {
 const {addToCart} = useCartContext()
-  const { id, fields: {stock} } = product
+  const { id, stock } = products
   console.log("id    ", id)
 
   const [amount, setAmount] = useState(1)
@@ -61,7 +61,7 @@ const {addToCart} = useCartContext()
           decrease={decrease}
         />
         </div>
-       {product.fields.stock > 0 && <div className='buy' onClick={() => addToCart(id, amount, product)}>Add to cart</div>}
+       {products.stock > 0 && <div className='buy' onClick={() => addToCart(id, amount, products)}>Add to cart</div>}
         </div>
     </Wrapper>
   )

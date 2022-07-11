@@ -48,11 +48,13 @@ export const ProductsProvider = ({ children }) => {
   }
 
   const getSingleProduct = async (url) => {
-    console.log("url", url);
+    console.log(" from getsingle function url", url);
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
     try {
+      let singleProduct;
       const response = await axios.get(url)
-      const singleProduct = response.data
+      const id =  response.data.id
+      singleProduct = {...response.data.fields, id }
       console.log("singlepro", singleProduct);
       dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct })
     } catch (error) {
