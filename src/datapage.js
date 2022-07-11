@@ -1,6 +1,6 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 import AddToCart from "./components/AddToCart";
-import PictureImages from "./pictureimages";
+// import PictureImages from "./pictureimages";
 
 function DataPage({product}) {
     const {id, price, name, images} = product;
@@ -29,6 +29,6 @@ function DataPage({product}) {
 
 export default DataPage;
 
-const Wrapper = styled.div`
+// const Wrapper = styled.div`
 
-`
+// `

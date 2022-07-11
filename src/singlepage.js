@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components";
 import { useParams, useHistory } from 'react-router-dom';
 import { useProductsContext } from './context/products_context';
@@ -7,8 +7,8 @@ import { single_product_url } from './utils/constants';
 import Loading from "./Loading";
 import  Error from "./Error";
 // import Categories from "./categories";
-import PictureImages from "./pictureimages";
-import AddToCart from './components/AddToCart';
+// import PictureImages from "./pictureimages";
+// import AddToCart from './components/AddToCart';
 import DataPage from './datapage';
 // import axios from "axios";
 
@@ -29,7 +29,7 @@ import DataPage from './datapage';
 
 
 const SinglePage = () => {
-  const [image, setImage] = useState("")
+  // const [image, setImage] = useState("")
     const { id } = useParams()
     let myurl = `${single_product_url}${id}`;
     const history = useHistory()
