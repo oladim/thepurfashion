@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useProductsContext } from "./context/products_context";
+// import { useProductsContext } from "./context/products_context";
 // import {SmallFlash, MediumFlash, BigFlash} from "./allimports";
 import SmallFlash from  "./components/smallflash";
 import MediumFlash from "./components/mediumflash";
@@ -14,8 +14,8 @@ const itemimage = require("./assets/images/great.png");
 
 
 function FlashSales() {
-    const {products} = useProductsContext();
-    console.log(products[0]);
+    // const {products} = useProductsContext();
+    // console.log(products[0]);
 
     // const {name, color, size, stock, weight, material, url} = products[0];
     return <Wrapper>

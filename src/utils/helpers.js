@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export const formatPrice = (number) => {
   return new Intl.NumberFormat('en-US', {
@@ -20,7 +20,7 @@ export const BlackButton = () => {
 
 
   return<Wrapper>
-    <div onClick={()=>window.location.replace("/#products")} className="link"><div className="order">More Products</div></div>
+    <div className="link"><div className="order">More Products</div></div>
   </Wrapper>
 }
 
