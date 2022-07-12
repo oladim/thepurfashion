@@ -134,18 +134,18 @@ ul,
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
   .wrap {
     margin-top: 2rem;
 
   }
 
-  .others_flash {
-    margin-left: 2rem;
-  }
+  .others_flash {}
 
   .personalcolor {
-    margin-left: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
   }
 
   .topcate {
@@ -160,20 +160,6 @@ ul,
     font-size: 1rem;
   }
 
-
-
-
-}
-
-@media (max-width: 600px) {
-  .content {}
-
-
-
-  .contents {
-    width: 100px;
-
-  }
 
 
 

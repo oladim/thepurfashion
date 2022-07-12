@@ -4,10 +4,10 @@ import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 
-function SingleProduct({url, id, name, price}) {
+function SingleProduct({url, id, name, price, discount}) {
     return <Wrapper>
         <div className="contents">
-            <div className="discount">-70%</div>
+            {discount ? <div className="discount">{discount}</div> : <div></div>}
             <div className="image"><img src={url} alt="itemimage"/></div>
             <Link to={`/products/${id}`} className='link'><FaSearch /></Link>
             <div className="name">{name}</div>
@@ -32,6 +32,7 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-rows: 30px 1fr 50px 60px;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    justtify-content: center;
   
 }
 
@@ -76,14 +77,15 @@ justify-self: right;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:90%;
-    height: 90%;
+    width:100%;
+    height: 100%;
     img{
         width: 100%;
-        height: 226px;
+        height: 220px;
         object-fit: cover;
         overflow: hidden;
         transition: all 0.5s ease-out 1s;
+       
     }
 } 
 

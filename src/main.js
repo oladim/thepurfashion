@@ -6,8 +6,8 @@ import TopCategories from "./topcat";
 import NewProducts from "./new_products";
 // import AllProducts from "./all_products";
 // import {NewLetter, Footer} from "./allimports";
-import NewLetter from "./newsletter";
-import Footer from "./footer";
+// import NewLetter from "./newsletter";
+// import Footer from "./footer";
 
 
 function Main(){
@@ -22,8 +22,8 @@ function Main(){
         <TopCategories />
         <NewProducts />
         {/* <AllProducts /> */}
-        <NewLetter />
-        <Footer />
+        {/* <NewLetter />
+        <Footer /> */}
         </div>
         
     </div>

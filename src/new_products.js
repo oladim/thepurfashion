@@ -107,6 +107,18 @@ margin-top: 15px;
 
      
   }
+  @media (max-width: 360px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        padding-left: 0;
+     
+        .contents{
+          margin-left: 5px;
+         
+          }
+      }
+  }
 
 
 `

@@ -20,6 +20,7 @@ const Wrapper = styled.div`
 width: 100%;
 
 .heading{
+    width: 100%;
     height: 70.19px;
     display: flex;
     align-items: center;
@@ -37,4 +38,7 @@ width: 100%;
        
     }
 }
+
+@media (max-width: 360px) {
+    
 `

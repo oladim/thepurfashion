@@ -32,8 +32,8 @@ function FlashSales() {
             <div className="details">
                 <div>Product Details</div>
                 <ul>
-                    <li>Name: "Leather Bag"</li>
-                    <li>Color: "All"</li>
+                    <li>Name: Leather Bag</li>
+                    <li>Color: All</li>
                     {/* <li>Bag Size: </li> */}
                     <li>Available Pieces: 10</li>
                     <li>Material: PU Leather</li>

@@ -13,6 +13,8 @@ import Products from "./products";
 import CartPage from "./pages/CartPage";
 // import Checkout from "./checkout";
 import CheckoutPage from "./pages/CheckoutPage";
+import NewLetter from "./newsletter";
+import Footer from "./footer";
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
           </Route>
           <Route exact path="*"><Error /></Route>
       </Switch>
+    <NewLetter />
+    <Footer />
     </Router>
     </AuthWrapper>
   )
