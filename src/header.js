@@ -4,6 +4,7 @@ import {useUserContext} from "./context/user_context";
 import { Link } from "react-router-dom";
 import { useCartContext } from "./context/cart_context";
 
+
 const logo = require("./assets/images/logo.png");
 
 function Header() {
@@ -12,7 +13,7 @@ const {total_items} = useCartContext();
 
     return <Wrapper>
         <div className="header">
-        <img className="logo" src={logo} alt="Thepurfashion logo"/>
+        <Link to="/"><img className="logo" src={logo} alt="Thepurfashion logo"/></Link>
         <div className="login_cart">
             
         {myUser ? (
@@ -128,6 +129,41 @@ justify-content: center;
         border: 2px solid #BC3B62;
         border-radius: 1rem;
     }
+
+    .header {
+        padding: 10px;
+      .logo{
+      width: 150px;
+      }
+
+      .login_cart{
+        flex-direction: column;
+        gap: 10px;
+
+        .cart{
+            height: 20px;
+            width: 80px;
+        }
+      }
+  }
+  }
+
+  @media (max-width: 360px) {
+    .header {
+        padding: 10px;
+      .logo{
+      width: 150px;
+      }
+
+      .login_cart{
+        flex-direction: column;
+        gap: 10px;
+
+        .cart{
+            height: 20px;
+            width: 80px;
+        }
+      }
   }
 
 `

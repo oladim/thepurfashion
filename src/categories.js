@@ -71,5 +71,19 @@ button{
     .content {
       flex-wrap: wrap;
     }
+
+    .content .back {
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .content .back {
+      p{
+        font-size: 15px;
+      }
+    }
   }
 `

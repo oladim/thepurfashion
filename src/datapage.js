@@ -78,4 +78,10 @@ const Wrapper = styled.div`
         height: 100vh;
     }
   }
+
+  @media (max-width: 360px) {
+    .maincontent {
+      margin-bottom: 1rem;
+      height: 100%;
+  }
 `
