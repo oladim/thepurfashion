@@ -39,6 +39,7 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
 }
 
 const Wrapper = styled.article`
+
   .subtotal {
     display: none;
   }
@@ -172,6 +173,11 @@ const Wrapper = styled.article`
       }
     }
   }
+
+  @media (max-width: 360px) {
+   article{
+    width: 100vw;
+   }
 `
 
 export default CartItem

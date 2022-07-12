@@ -41,6 +41,10 @@ const Wrapper = styled.div`
   //   margin-bottom: 0;
   // }
 
+  @media (min-width: 360px) {
+      width: 80px;
+      margin-left:-10px;
+    }
 `
 
 export default AmountButtons

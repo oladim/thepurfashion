@@ -63,5 +63,19 @@ const Wrapper = styled.section`
     background: var(--clr-black);
     height: 3.5rem;
   }
+
+  @media (min-width: 360px) {
+      .clear-btn, .link-btn{
+        font-size: 10px;
+        width: 8rem;
+        
+      }
+
+      .link-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 `
 export default CartContent
