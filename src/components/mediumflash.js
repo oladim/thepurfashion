@@ -2,7 +2,7 @@ import styled from "styled-components";
 // import {Price, BlackButton} from "../allimports";
 import Price from "./price";
 import { BlackButton } from "../utils/helpers";
-import menbagimage from "../assets/images/menbag.png";
+import menbagimage from "../assets/images/corona.png";
 
 
 function MediumFlash() {

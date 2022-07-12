@@ -7,7 +7,8 @@ import BigFlash from "./components/bigflash";
 const rectangle = require("./assets/images/rectangle.png");
 const flashimage = require("./assets/images/flashimage.png");
 const small = require("./assets/images/small.png");
-const itemimage = require("./assets/images/itemimage.png");
+// const itemimage = require("./assets/images/itemimage.png");
+const itemimage = require("./assets/images/great.png");
 
 
 

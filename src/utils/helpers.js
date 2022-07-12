@@ -20,7 +20,7 @@ export const BlackButton = () => {
 
 
   return<Wrapper>
-    <Link to={"#products"} className="link"><div className="order">More Products</div></Link>
+    <div onClick={()=>window.location.replace("/#products")} className="link"><div className="order">More Products</div></div>
   </Wrapper>
 }
 
@@ -31,8 +31,8 @@ const Wrapper = styled.div`
 }
 .order{
 
-  width: 150px;
-  height: 50px;
+  width: 120.37px;
+  height: 42.18px;
   background: #000000;
   border-radius: 40px;
   color: #FFFFFF;
