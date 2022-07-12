@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useRef } from "react";
 // import { DealsHeading, SingleProduct } from "./allimports";
 import DealsHeading from "./components/dealsheading";
 import SingleProduct from "./singleproduct";
@@ -6,14 +7,14 @@ import { useFilterContext } from './context/filter_context';
 // import { useProductsContext } from "./context/products_context";
 
 function NewProducts() {
-
+  const productSection = useRef(null);
 
     const { filtered_products: products } = useFilterContext()
   
   if (products.length < 1) {
     return <Wrapper>
 
-      <div className="personalcolor">
+      <div className="personalcolor" ref={productSection}>
         <DealsHeading deal={"Products"}/>
         </div>
       <h5 className="searchresult" style={{ textTransform: 'none' }}>

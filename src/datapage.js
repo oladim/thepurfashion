@@ -39,7 +39,7 @@ const Wrapper = styled.div`
         margin-top: 4rem;
         padding:2rem;
         width: 60%;
-        height: 60vh;
+        height: 70vh;
         margin-left: auto;
         margin-right: auto;
         align-items: center;
@@ -77,6 +77,12 @@ const Wrapper = styled.div`
         width: 80%;
         height: 100vh;
     }
+  }
+
+  @media (max-width: 600px) {
+    .maincontent {
+      margin-bottom: 1rem;
+      height: 100%;
   }
 
   @media (max-width: 360px) {

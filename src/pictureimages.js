@@ -29,7 +29,7 @@ flex-direction: column;
 
   img{
     width: 80%;
-    height: 100%;
+    height: 80%;
     border-radius: 4px;
     object-fit: contain;
     

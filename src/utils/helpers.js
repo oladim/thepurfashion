@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import { useRef } from "react";
 // import { Link } from "react-router-dom";
 
 export const formatPrice = (number) => {
@@ -17,7 +18,14 @@ export const getUniqueValues = (data, type) => {
 }
 
 export const BlackButton = () => {
+//  const productSection = useRef(null)
 
+//  const scrollToSection = (elementRef) => {
+//   window.scrollTo({
+//     top: elementRef.current.offsetTop,
+//     behavior: "smooth"
+//   })
+//  }
 
   return<Wrapper>
     <div className="link"><div className="order">More Products</div></div>
