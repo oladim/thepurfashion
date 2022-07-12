@@ -49,7 +49,7 @@ const CheckoutForm = () => {
   const createPaymentIntent = async () => {
     try {
       const { data } = await axios.post(
-        'localhost:3000/.netlify/functions/create-payment-intent',
+        '/.netlify/functions/create-payment-intent',
         JSON.stringify({ cart, shipping_fee, total_amount })
       )
         console.log("client secret", data.clientSecret)
@@ -294,6 +294,11 @@ article{
       width: 80vw;
     }
   }
+  @media (min-width: 360px) {
+    article{
+      margin-left: 1rem;
+    }
+
 `
 
 export default StripeCheckout

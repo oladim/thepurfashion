@@ -82,7 +82,7 @@ button{
   @media (max-width: 360px) {
     .content .back {
       p{
-        font-size: 15px;
+        font-size: 12px;
       }
     }
   }
