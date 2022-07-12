@@ -10,7 +10,7 @@ export const formatPrice = (number) => {
 
 export const getUniqueValues = (data, type) => {
   let unique = data.map((item) => item[type])
-  if (type === 'colors') {
+  if (type === 'color') {
     unique = unique.flat()
   }
   return ['All Products', ...new Set(unique)]
@@ -20,7 +20,7 @@ export const BlackButton = () => {
 
 
   return<Wrapper>
-    <Link to={"#"} className="link"><div className="order">View More</div></Link>
+    <Link to={"#products"} className="link"><div className="order">More Products</div></Link>
   </Wrapper>
 }
 
@@ -31,8 +31,8 @@ const Wrapper = styled.div`
 }
 .order{
 
-  width: 120.37px;
-  height: 42.18px;
+  width: 150px;
+  height: 50px;
   background: #000000;
   border-radius: 40px;
   color: #FFFFFF;

@@ -3,8 +3,7 @@ import styled from "styled-components";
 function Price({price}) {
     return <Wrapper>
         {price ? (<div><p className="strike">${(0.70 * price)+price}</p>
-    <p className="price">${price}</p></div>): (<div><p className="strike">$100</p>
-    <p className="price">$70</p></div>)}
+    <p className="price">${price}</p></div>): null}
     
 </Wrapper>
 }

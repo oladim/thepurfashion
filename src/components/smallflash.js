@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ladyBag from "../assets/images/ladybag.png";
-import maleBag from "../assets/images/malebag.png";
+import ladyBag from "../assets/images/elegants.png";
+import maleBag from "../assets/images/brown.png";
 // import { BlackButton } from "../allimports";
 import { BlackButton } from "../utils/helpers";
 
@@ -38,7 +38,7 @@ const Content = ({filetodisplay}) =>{
     return <ContentWrapper>
        
        <div className="price_button">
-       <p className="price">$200</p>
+       <p className="price">Elegant Designs</p>
        <p><BlackButton /></p>
        </div>
        <img src={filetodisplay} alt="display" />
@@ -62,9 +62,9 @@ border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 67.44px;
+        width: 100px;
         height: 29.51px;
-        background: #FFE1B0;
+        
         border-radius: 5px;
     }
 }

@@ -31,6 +31,7 @@ const Filters = () => {
        
         
               {categories.map((c, index) => {
+                console.log(c, category)
                 return (
                   <button
                     key={index}

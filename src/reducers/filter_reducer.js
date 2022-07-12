@@ -89,9 +89,9 @@ const filter_reducer = (state, action) => {
     //   )
     // }
     // colors
-    // if (color !== 'All') {
+    // if (category !== 'All Products') {
     //   tempProducts = tempProducts.filter((product) => {
-    //     return product.colors.find((c) => c === color)
+    //     return product.category.find((c) => c === category)
     //   })
     // }
     // // price

@@ -15,6 +15,9 @@ import { useHistory } from 'react-router-dom'
 
 const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
+console.log(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
+console.log("stripe promise", promise)
+
 const CheckoutForm = () => {
   const { cart, total_amount, shipping_fee, clearCart } = useCartContext()
   const { myUser } = useUserContext()
