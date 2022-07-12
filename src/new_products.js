@@ -101,7 +101,7 @@ margin-top: 15px;
         .contents{
            margin-left: auto;
            margin-right: auto;
-           width: 350px;
+           
           }
       }
 

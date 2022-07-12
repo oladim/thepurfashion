@@ -132,3 +132,49 @@ ul,
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
+
+@media (max-width: 400px) {
+  .wrap {
+    margin-top: 2rem;
+
+  }
+
+  .others_flash {
+    margin-left: 2rem;
+  }
+
+  .personalcolor {
+    margin-left: 2rem;
+  }
+
+  .topcate {
+    text-align: center;
+  }
+
+  .newsletter .new {
+    font-size: 1rem;
+  }
+
+  .logo_newletter .newsletter .new {
+    font-size: 1rem;
+  }
+
+
+
+
+}
+
+@media (max-width: 600px) {
+  .content {}
+
+
+
+  .contents {
+    width: 100px;
+
+  }
+
+
+
+}

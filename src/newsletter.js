@@ -141,4 +141,16 @@ align-items: center;
         width: 28rem;
     }
   }
+
+  @media (max-width: 601px) {
+    
+    .logo_newletter .newsletter .new {
+        font-size: 1rem;
+      }
+
+      .test{
+        width: 20rem;
+      }
+  }
 `
+

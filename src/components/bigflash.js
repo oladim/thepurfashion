@@ -6,7 +6,7 @@ import Price from "./price";
 
 
 function BigFlash() {
-    return<Wrapper>
+    return<Wrapper className="wrap">
         <p className="name">Coach X Tom Wesselmann Rogue Crossbody 12</p>
         <div className="imagecontent"><img src={image} alt="couchbag"/></div>
         <div className="price_button">
@@ -56,4 +56,6 @@ grid-template-rows: 100px 1fr 100px;
         margin-bottom: -15px;
     }
 }
+
+
 `
